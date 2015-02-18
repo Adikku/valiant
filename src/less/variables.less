@@ -1,0 +1,40 @@
+// Fonts
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Dancing+Script);
+
+@iconPath: "../less/icons/font/"; 
+@brandFontFamily: "Dancing Script";
+@fontFamily: "Noto Sans";
+
+@easeTime: .3s;
+@easeAnimation: cubic-bezier(0.39, 0.06, 0.94, 0.06);
+
+@white: 				#fff;
+@gray-base:             #000;
+@gray-darker:           lighten(@gray-base, 13.5%); // #222
+@gray-dark:             lighten(@gray-base, 20%);   // #333
+@gray:                  lighten(@gray-base, 33.5%); // #555
+@gray-light:            lighten(@gray-base, 46.7%); // #777
+@gray-lighter:          lighten(@gray-base, 93.5%); // #eee
+
+@brandPrimaryColor:     #82e4b9;
+@navBgColor: 			#f9f9f1;
+@navColor:				@gray;
+@navSeparatorLineColor: fade(@gray-base, 10%);
+@navToggleActionColor:	#f1e3b2;
+@navHeaderColor:		#999;
+@navLinkBgColorHover: 	lighten(#a6e1c9, 10%);
+@navLinkColorActive: 	darken(@brandPrimaryColor, 30%);
+@childNavBgColor:		@white;
+
+@phoneNavBgColor:			@gray-darker;
+@phoneToggleColor:			#444;
+@phoneLinkBgColor:			@phoneToggleColor;
+@phoneSeparatorLineColor: 	#444;
+@phoneToggleActiveBgColor: 	transparent;
+
+@phone: ~"(min-width : 320px) and (max-width : 767px)";
+@phone-landscape: ~"(min-device-width : 480px) and (max-device-width : 768) and (orientation : landscape)";
+@tablet: ~"(min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)";
+@tablet-landscape: ~"(min-device-width : 767px) and (max-device-width : 1024px) and (orientation : landscape)";
+@desktop: ~"(min-width: 1224px)";

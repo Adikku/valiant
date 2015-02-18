@@ -1,0 +1,50 @@
+@import "../variables";
+body {
+	background: #ecfde5;
+}
+
+.container {
+	position: relative;
+	width: 100%;
+	max-width: 1480px;
+	margin: 0;
+	font-family: @fontFamily;
+}
+
+.main-content {
+	padding: 20px;
+}
+
+.navbar-brand {
+	font-family: @brandFontFamily;
+}
+
+.btn:focus, .btn:active, button:focus { outline: none; }
+
+.header-img{
+	background-image: url(../../header-bg.png);
+	background-size: cover;
+	width: 100%;
+	height: auto;
+
+	h1 {
+		font-family: @brandFontFamily;
+		color: #f1f9f9;
+
+		small {
+			color: #f1f9f9;
+		}
+	}
+
+	p {
+		color: #f1f9f9;
+	}
+	a {
+		color: #fff;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}	
+	}
+}
+.footer hr { border-color: #999; }

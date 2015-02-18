@@ -1,0 +1,178 @@
+.main-nav { 
+	&.push-left {
+		background-color: @navBgColor;
+		width: 200px;
+		height: 100%;
+		position: fixed;
+		bottom: 0;
+		top: 20px;
+		left: -200px;
+		z-index: 20;
+		box-shadow: 0 0 10px -2px fade(@gray-base, 40%);
+
+		-webkit-transition: @easeTime @easeAnimation;
+		   -moz-transition: @easeTime @easeAnimation;
+		     -o-transition: @easeTime @easeAnimation;
+		        transition: @easeTime @easeAnimation;
+				 	
+		.nav-togg {
+			position: absolute;
+			transform: translate(220px, 20px);
+			font-size: 20px;
+			padding: 5px 11px;
+			color: @brandPrimaryColor;
+			border: 2px solid @brandPrimaryColor;
+			border-radius: 5px;
+
+			-webkit-transition: all .1s ease-out;
+			   -moz-transition: all .1s ease-out;
+			     -o-transition: all .1s ease-out;
+			        transition: all .1s ease-out;
+
+			&:hover {
+				background: @brandPrimaryColor;
+				color: @navToggleActionColor;
+				cursor: pointer;
+
+				-webkit-transition: all .1s ease-in;
+				   -moz-transition: all .1s ease-in;
+				     -o-transition: all .1s ease-in;
+				        transition: all .1s ease-in;
+			}
+		}
+
+		.nav-header {
+			text-align: center;
+			font-size: 12px;
+			padding: 40px;
+			color: @navHeaderColor;
+		}
+
+		ul {
+			margin: 0;
+			padding: 0;
+			cursor: default;
+		}
+					
+		.nav > li {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			border-top: 1px solid @navSeparatorLineColor;
+						
+			&:last-child {
+				border-bottom: 1px solid @navSeparatorLineColor;
+			}
+
+			span {
+				opacity: 0;
+				margin-left: -100px;
+
+				-webkit-transition: all .15s @easeAnimation;
+			       -moz-transition: all .15s @easeAnimation;
+			         -o-transition: all .15s @easeAnimation;
+			        	transition: all .15s @easeAnimation;
+			}
+
+			> a {
+				display: block;
+				line-height: 36px;
+				color: @navColor;
+				padding: 0;
+				padding-left: 30px;
+				outline: none;
+				white-space: nowrap;
+
+				-webkit-transition: background .1s ease-in-out;
+				   -moz-transition: background .1s ease-in-out;
+				     -o-transition: background .1s ease-in-out;
+				        transition: background .1s ease-in-out;
+			}
+
+			a:hover {
+				text-decoration: none;
+				background: @navLinkBgColorHover;
+				-webkit-transition: background .1s ease-in-out;
+				   -moz-transition: background .1s ease-in-out;
+				     -o-transition: background .1s ease-in-out;
+				        transition: background .1s ease-in-out;
+			}
+
+			i {
+				float: left;
+				font-size: 14px;
+				margin-left: -30px;
+				line-height: 36px;
+				width: 50px;
+				height: 36px;
+				font-style: normal;
+				text-align: center;
+
+				-webkit-transition: background .1s ease-in-out;
+				   -moz-transition: background .1s ease-in-out;
+				     -o-transition: background .1s ease-in-out;
+				        transition: background .1s ease-in-out;
+			}
+
+			.caret {
+				float: right;
+				position: absolute;
+				top: 15px;
+				right: 15px;
+			}
+
+			ul {
+				height: 0;
+				margin: 0;
+				padding: 0;
+				opacity: 0;
+				overflow: hidden;
+
+				-webkit-transition: opacity @easeTime linear;
+				   -moz-transition: opacity @easeTime linear;
+				     -o-transition: opacity @easeTime linear;
+				        transition: opacity @easeTime linear;
+				li {
+					margin: 0;
+					list-style: none;
+					border-top: 1px solid @navSeparatorLineColor;
+					background: @childNavBgColor;
+								
+					&:last-child {
+						border-bottom: 0;
+					}
+
+					a {
+						font-size: 12px;
+						line-height: 36px;
+						display: block;
+						color: @navColor;
+						padding-left: 60px;
+						outline: none;
+
+						-webkit-transition: background .1s ease-in-out;
+						   -moz-transition: background .1s ease-in-out;
+						     -o-transition: background .1s ease-in-out;
+						        transition: background .1s ease-in-out;
+					}
+				}
+			}
+		}
+
+	}
+
+	.nav-pills > li {
+		> a {
+			border-radius: 0;
+			&:focus {
+				background: transparent;
+			}
+		}
+
+		&.active > a {
+			background: @navBgColor;
+			color: @navLinkColorActive;
+		}
+
+	}
+}
